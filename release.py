@@ -99,6 +99,13 @@ def create_option_parser():
         "Make sure you have bumped the version, updated the changelog, and pushed the tag."
     )
     parser.add_option_group(rel_group)
+
+    rel_group.add_option(
+        "--all",
+        action="store_true",
+        dest="all",
+        help="Push a version tag, release on GitHub, and upload to PyPi."
+    )
     
     rel_group.add_option(
         "--github",
